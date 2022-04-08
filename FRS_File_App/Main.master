@@ -1,0 +1,64 @@
+<%@ Master Language="C#" MasterPageFile="~/Root.master" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="FRS_File_App.MainMaster" %>
+
+<%-- DXCOMMENT: Page Main.master is a master page that contains central area layout --%>
+<asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
+        <dx:ASPxPanel ID="LeftPane" runat="server" FixedPosition="WindowLeft" ClientInstanceName="leftPane" CssClass="leftPane" Collapsible="true">
+            <SettingsAdaptivity CollapseAtWindowInnerWidth="1023" />
+            <Styles>
+                <Panel CssClass="panel"></Panel>
+            </Styles>
+            <PanelCollection>
+                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                        <div class="leftPanel">
+                            <%-- DXCOMMENT: Configure the left panel's ASPxNavBar --%>
+<dx:ASPxNavBar ID="ASPxNavBar1" runat="server" AutoCollapse="True" EnableAnimation="True" Width="100%">
+    <Border BorderWidth="0px" />
+    <Paddings Padding="0px" />
+    <Groups>
+        <dx:NavBarGroup Text="FRS Files">
+            <Items>
+                <%--<dx:NavBarItem Text="FRS Outbound Files" NavigateUrl="Default.aspx"></dx:NavBarItem>--%>
+                <dx:NavBarItem Text="FRS Payment Files" NavigateUrl="PaymentProcess.aspx"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( OCT 2021 )" NavigateUrl="TableEdit.aspx"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( NOV 2021 )" NavigateUrl="TableEdit_NOV2021.aspx"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( DEC 2021 )" NavigateUrl="TableEdit_DEC2021.aspx"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( JAN 2022 )" NavigateUrl="TableEdit_JAN2022.aspx" ></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( FEB 2022 )" NavigateUrl="TableEdit_FEB2022.aspx" ></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( MAR 2022 )" NavigateUrl="TableEdit_MAR2022.aspx"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( APR 2022 )" NavigateUrl="TableEdit_APR2022.aspx"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( MAY 2022 )" NavigateUrl="TableEdit_MAY2022.aspx" Visible="false"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( JUN 2022 )" NavigateUrl="TableEdit_JUN2022.aspx" Visible="false"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( JUL 2022 )" NavigateUrl="TableEdit_JUL2022.aspx" Visible="false"></dx:NavBarItem>
+
+                <dx:NavBarItem Text="FRS Outbound Files ( AUG 2022 )" NavigateUrl="TableEdit_AUG2022.aspx" Visible="false"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( SEP 2022 )" NavigateUrl="TableEdit_SEP2022.aspx" Visible="false"></dx:NavBarItem>
+
+                <dx:NavBarItem Text="FRS Outbound Files ( OCT 2022 )" NavigateUrl="TableEdit_OCT2022.aspx" Visible="false"></dx:NavBarItem>
+                <dx:NavBarItem Text="FRS Outbound Files ( NOV 2022 )" NavigateUrl="TableEdit_NOV2022.aspx" Visible="false"></dx:NavBarItem>
+
+                <dx:NavBarItem Text="FRS Outbound Files ( DEC 2022 )" NavigateUrl="TableEdit_DEC2022.aspx" Visible="false"></dx:NavBarItem>
+           
+            </Items>
+        </dx:NavBarGroup>
+     <%--   <dx:NavBarGroup Text="Group 2">
+            <Items>
+                <dx:NavBarItem Text="Item 1"></dx:NavBarItem>
+                <dx:NavBarItem Text="Item 2"></dx:NavBarItem>
+                <dx:NavBarItem Text="Item 3"></dx:NavBarItem>
+                <dx:NavBarItem Text="Item 4"></dx:NavBarItem>
+                <dx:NavBarItem Text="Item 5"></dx:NavBarItem>
+            </Items>
+        </dx:NavBarGroup>--%>
+    </Groups>
+</dx:ASPxNavBar>
+                        </div>
+                </dx:PanelContent>
+            </PanelCollection>
+        </dx:ASPxPanel>
+
+        <div class="contentPane">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+            
+
+</asp:Content>
